@@ -7,23 +7,23 @@ double pi = 1.0;
 
 int main()
 {
-	std::ios::sync_with_stdio(false);   // cout speedhack
+	std::ios::sync_with_stdio(false);
 	
-	std::ifstream infile("rounds.txt"); // open input file
-	infile >> rounds; // read number from file
-	infile.close(); // close input file
+	std::ifstream infile("rounds.txt");
+	infile >> rounds;
+	infile.close();
 	
-	rounds += 2u; // do this outside the loop
+	rounds += 2u;
 	
-	for (unsigned i=2 ; i < rounds ; ++i) // use ++i instead of i++
+	for (unsigned i=2 ; i < rounds ; ++i)
 	{
-		x = -x; // some compilers optimize this better than x *= -1
-		pi += (x / (2u * i - 1u)); // double / unsigned = double
+		x = -x; 
+		pi += (x / (2u * i - 1u));
 	}
 	
 	pi *= 4;
 	
-	std::cout.precision(17); // set no. of decimal digits (upto 50)
-	std::cout << pi << std::endl; // print pi to console
+	std::cout.precision(17);
+	std::cout << pi << std::endl;
 	return 0;
 }
