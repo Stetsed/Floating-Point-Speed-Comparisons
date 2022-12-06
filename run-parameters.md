@@ -1,5 +1,5 @@
 # Parameters to run each of the languages.
-(Language)(Compile(If Needed))(Run)
+(Language)(Compile(If Required))(Run)
 
 Python - X - python3 calculate.py
 
